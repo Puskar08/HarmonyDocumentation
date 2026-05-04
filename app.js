@@ -13,7 +13,7 @@ const MANUAL = {
                     </div>
                     <div class="content-body">
                         <p><strong>Harmony Bridge</strong> is a next-generation trading bridge & aggregation platform that connects MT4/MT5 brokers to multiple liquidity providers, sophisticated routing engines, and smart order management. Designed for low latency, full transparency, and flexibility.</p>
-                        <p>Please use the navigation panel on the left. Click the <strong>☰ Menu</strong> button next to the heading to expand/collapse the sidebar. Each parent item has a <strong>▶</strong> icon that toggles its sub-items. Clicking any menu item makes it <strong>bold</strong> to show your current location.</p>
+                        
                         <div class="info-box">
                             🔍 <strong>Quick Tip</strong> — Harmony Bridge provides real-time symbol mapping, STP/B-Book hybrid routing, scalper detection, spread control, and advanced reporting.
                         </div>
