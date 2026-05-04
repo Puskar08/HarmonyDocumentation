@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f2f5;
+    color: #1a2634;
+    line-height: 1.5;
+}
+
+/* main app container */
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* top header */
+.top-bar {
+    background: #0b2b3b;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.logo-area h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+}
+
+.logo-area span {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    display: inline-block;
+    margin-left: 0.2rem;
+}
+
+
+/* toggle button */
+.nav-toggle-btn {
+    /* background: #1f4a5f; */
+    background: #0b2b3b;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0.3rem 0.85rem;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+.nav-toggle-btn:hover {
+    background: #2c627c;
+}
+
+.nav-toggle-btn span:first-child {
+    font-size: 1.2rem;
+}
+
+.nav-toggle-btn .toggle-text {
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-area {
+    background: #1f4a5f;
+    border-radius: 40px;
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-width: 220px;
+}
+
+.search-area input {
+    background: transparent;
+    border: none;
+    padding: 0.4rem;
+    color: white;
+    font-size: 0.9rem;
+    outline: none;
+    width: 180px;
+}
+
+.search-area input::placeholder {
+    color: #cbdbe2;
+}
+
+.search-area button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.search-area button:hover {
+    opacity: 0.8;
+}
+
+/* main layout flex */
+.main-layout {
+    display: flex;
+    flex: 1;
+    position: relative;
+}
+
+/* ========== SIDEBAR NAVIGATION ========== */
+.nav-panel {
+    padding-top: 20px;
+    width: 400px;
+    background: #ffffff;
+    border-right: 1px solid #e9edf2;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-shrink: 0;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.02);
+    transition: width 0.2s ease;
+}
+
+/* COLLAPSED STATE */
+.nav-panel.collapsed {
+    width: 0px;
+    padding: 0;
+    overflow: hidden;
+    border-right: none;
+}
+
+/* inner scroll padding */
+.nav-panel>* {
+    padding: 1.2rem 0 2rem 0;
+}
+
+/* Hide mobile search inside sidebar by default (desktop) */
+.nav-search-mobile {
+    display: none;
+    padding: 0 1rem 1rem 1rem;
+    border-bottom: 1px solid #ecf3f8;
+    margin-bottom: 0.5rem;
+}
+
+/* ========== NAVIGATION TREE STYLES ========== */
+.nav-section {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-section li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Base nav-item style */
+.nav-item {
+    display: block;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #2c3e4e;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0 12px 12px 0;
+    margin-right: 0.6rem;
+    background: transparent;
+}
+
+.nav-item:hover {
+    /* background: #eef3fc; */
+    color: #0f5b8c;
+}
+
+/* ACTIVE state - BOLD as requested */
+.nav-item.active {
+    /* background: linear-gradient(90deg, #eaf1fa, #e2ecf6); */
+    color: #0066a0;
+    border-left: 3px solid #0066a0;
+    font-weight: bold;
+}
+
+/* PARENT (toggleable header) - always has the > icon */
+.nav-parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #1a2c3c;
+    border-radius: 0 12px 12px 0;
+    margin-right: 0.6rem;
+    user-select: none;
+    background: transparent;
+}
+
+.nav-parent:hover {
+    background: #eef3fc;
+    color: #0e5c85;
+}
+
+.parent-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+/* > toggle icon - NO ROTATION TRANSITION, just static or simple */
+.toggle-icon {
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    color: #6286a2;
+    transition: none;
+}
+
+/* When parent is open, icon changes from ▶ to ▼ style - rotate but without transition */
+.nav-parent.open .toggle-icon {
+    transform: rotate(90deg);
+    color: #0066a0;
+}
+
+/* SUB-NAVIGATION - NO TRANSITION for instant open/close */
+.sub-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: none;
+}
+
+/* when parent has 'open', sub-nav expands instantly */
+.nav-parent.open+.sub-nav {
+    max-height: 800px;
+}
+
+/* nested sub-nav items */
+.sub-nav li a {
+    display: block;
+    padding: 0.5rem 1rem 0.5rem 3rem;
+    font-size: 0.85rem;
+    color: #456077;
+    text-decoration: none;
+    border-radius: 0 12px 12px 0;
+    margin-right: 0.6rem;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.sub-nav li a:hover {
+    /* background: #f0f5fb; */
+    color: #1a6c9e;
+    /* padding-left: 3.2rem; */
+}
+
+/* Active sub item - bold */
+.sub-nav li a.active {
+    /* background: #e9f0f8; */
+    color: #0066a0;
+    font-weight: bold;
+    border-left: 2px solid #0066a0;
+}
+
+/* Additional resource sections */
+.nav-section-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #7b96ae;
+    padding: 1rem 1rem 0.4rem 1.8rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.divider-light {
+    height: 1px;
+    background: #eef2f6;
+    margin: 0.8rem 1rem 0.8rem 1.8rem;
+}
+
+/* ========== RIGHT CONTENT AREA ========== */
+.content-area {
+    flex: 1;
+    background: #f8fafc;
+    padding: 2rem 2.5rem;
+    overflow-y: auto;
+}
+
+/* card styling */
+.manual-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 2rem 2.2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #e9edf2;
+}
+
+.page-header {
+    border-bottom: 2px solid #e2edf2;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.page-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0a2e38;
+}
+
+.page-header .breadcrumb {
+    font-size: 0.8rem;
+    color: #5f7d95;
+    border-left: 3px solid #90b4d0;
+    padding-left: 0.75rem;
+}
+
+.content-body {
+    font-size: 1rem;
+    color: #1f2e3a;
+}
+
+.content-body p {
+    margin-bottom: 1rem;
+}
+
+.content-body h3 {
+    margin: 1.5rem 0 0.75rem 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1e4a5f;
+}
+
+.content-body ul,
+.content-body ol {
+    margin: 0.75rem 0 1rem 1.8rem;
+}
+
+.info-box {
+    background: #eef9ff;
+    border-left: 4px solid #2c7a6e;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    margin: 1.2rem 0;
+}
+
+.footer-links {
+    margin-top: 2rem;
+    border-top: 1px solid #e2edf2;
+    padding-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    font-size: 0.85rem;
+    color: #4b6e82;
+    flex-wrap: wrap;
+}
+
+/* ===== MOBILE STYLES ===== */
+@media (min-width: 781px) {
+    .nav-search-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {
+    .header-actions {
+        display: none;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.8rem 1rem;
+        gap: 0.8rem;
+    }
+
+    .logo-area {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo-area h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav-search-mobile {
+        display: block;
+        padding: 0 1rem 1rem 1rem;
+        border-bottom: 1px solid #e2e8f0;
+        margin-bottom: 1rem;
+    }
+
+    .nav-search-mobile .search-area {
+        background: #f1f5f9;
+        border-radius: 40px;
+        padding: 0.4rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        border: 1px solid #e2e8f0;
+    }
+
+    .nav-search-mobile .search-area input {
+        background: transparent;
+        border: none;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        outline: none;
+        width: 100%;
+        color: #1a2634;
+    }
+
+    .nav-search-mobile .search-area input::placeholder {
+        color: #94a3b8;
+    }
+
+    .nav-search-mobile .search-area button {
+        background: none;
+        border: none;
+        color: #5b6f82;
+        cursor: pointer;
+        font-size: 1.1rem;
+    }
+
+    .nav-panel {
+        position: fixed;
+        top: 76px;
+        left: 0;
+        height: calc(100% - 76px);
+        z-index: 1000;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+        background: white;
+        transform: translateX(0);
+        transition: transform 0.25s ease;
+        padding-top: 0.5rem;
+    }
+
+    .nav-panel.collapsed {
+        transform: translateX(-100%);
+        width: 280px;
+    }
+
+    .content-area {
+        padding: 1.2rem;
+        width: 100%;
+    }
+
+    .manual-card {
+        padding: 1.2rem;
+    }
+
+    .page-header h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .logo-area h1 {
+        font-size: 1.1rem;
+    }
+
+    .nav-toggle-btn .toggle-text {
+        display: none;
+    }
+
+    .nav-toggle-btn {
+        padding: 0.2rem 0.5rem;
+    }
+
+    .content-area {
+        padding: 0.8rem;
+    }
+
+    .manual-card {
+        padding: 1rem;
+    }
+}
+
+.nav-panel::-webkit-scrollbar {
+    width: 4px;
+}
+
+.nav-panel::-webkit-scrollbar-track {
+    background: #eef2f6;
+}
+
+.nav-panel::-webkit-scrollbar-thumb {
+    background: #cbdae6;
+    border-radius: 10px;
+}

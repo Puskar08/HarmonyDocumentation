@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Harmony Bridge | User Manual — Collapsible Sidebar Navigation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="top-bar">
+            <div class="logo-area">
+                <h1>Harmony Bridge</h1>
+                <!-- <span>User Manual</span> -->
+                <button class="nav-toggle-btn" id="toggleNavBtn" aria-label="Toggle navigation">
+                    <span>☰</span>
+                </button>
+            </div>
+            <div class="header-actions">
+                <div class="search-area">
+                    <input type="text" id="searchInput" placeholder="Search here... (e.g., symbol map, routing)">
+                    <button id="searchBtn">🔍</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-layout">
+            <div class="nav-panel" id="sidebarNav"></div>
+            <div class="content-area" id="mainContent"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    
+</body>
+
+</html>
