@@ -275,8 +275,7 @@ body {
 /* nested sub-nav items */
 .sub-nav li a {
     display: block;
-    padding: 0.5rem 1rem 0.5rem 3rem;
-    font-size: 0.85rem;
+    /* padding: 0.5rem 1rem 0.5rem 3rem; */
     color: #456077;
     text-decoration: none;
     border-radius: 0 12px 12px 0;
@@ -534,4 +533,121 @@ body {
 .nav-panel::-webkit-scrollbar-thumb {
     background: #cbdae6;
     border-radius: 10px;
+}
+
+/* Architecture Diagram Styles */
+.architecture-diagram {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.architecture-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add a caption style */
+.architecture-caption {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #64748b;
+    font-style: italic;
+}
+
+a {
+    color: #1a6c9e;
+    text-decoration: none;
+}
+
+/* Parent wrapper and link styles */
+.nav-parent-wrapper {
+    position: relative;
+}
+
+
+
+.parent-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.toggle-icon {
+    font-size: 0.7rem;
+    transition: transform 0.2s;
+    display: inline-block;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+
+
+.parent-title-link {
+    flex: 1;
+}
+
+.nav-parent-link {
+    display: inline-block;
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0;
+    background: transparent;
+    border-left: none;
+}
+
+.nav-parent-link:hover {
+    color: #0066a0;
+    background: transparent;
+    
+}
+
+.nav-parent-link.active {
+    color: #0066a0;
+    font-weight: bold;
+    background: transparent;
+}
+
+.toggle-icon {
+    cursor: pointer;
+}
+
+
+/* Nested Menu Styles */
+.sub-nav.level-1 {
+    padding-left: 1rem;
+}
+
+.sub-nav.level-2 {
+    padding-left: 1.5rem;
+}
+
+.nav-parent.nested-parent {
+    padding-left: 0.5rem;
+}
+
+/* .nav-item-group.nested {
+    margin-top: 0.5rem;
+} */
+
+/* Indent nested items */
+.level-2 .nav-item {
+    padding-left: 2rem;
+    /* font-size: 0.85rem; */
+}
+
+/* Optional: Style for nav-parent wrapper when active */
+.nav-parent-link {
+    border-left: none !important;
 }
