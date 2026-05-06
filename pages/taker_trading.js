@@ -12,7 +12,7 @@ const TakerTrading = {
             <div class="content-body">
                 <p>This section is for configuring the trading behavior for the Taker connector.</p>
                 <div class="architecture-diagram">
-                    <img src="taker_trading_ss.png" alt="Taker Trading Diagram" class="architecture-image">
+                    <img src="./images/taker_trading_ss.png" alt="Taker Trading Diagram" class="architecture-image">
                 </div>
 
                 <p>
@@ -24,7 +24,7 @@ const TakerTrading = {
                 <h4>Steps to Configure Taker Trading behavior</h4>
 
                 <div class = "architecture-diagram">
-                    <img src="taker_trading_setup_ss.png" alt="Taker Trading Configuration Diagram" class="architecture-image">
+                    <img src="./images/taker_trading_setup_ss.png" alt="Taker Trading Configuration Diagram" class="architecture-image">
                 </div>
 
                 <ol>
@@ -64,7 +64,7 @@ const TakerTrading = {
 
                 <h4>Add mulitple rules for the same symbol</h4>
                 <div class = "architecture-diagram">
-                    <img src="taker_trading_multiple_rule_setup_ss.png" alt="Taker Trading Configuration Diagram" class="architecture-image">
+                    <img src="./images/taker_trading_multiple_rule_setup_ss.png" alt="Taker Trading Configuration Diagram" class="architecture-image">
                 </div>
                 <p>
                     Multiple trading rules can be added for the same symbol to allow for different Events, Groups and Accounts.. 

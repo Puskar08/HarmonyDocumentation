@@ -12,7 +12,7 @@ const TakerPricing = {
             <div class="content-body">
                 <p>This section is for configuring the pricing behavior for the Taker connector.</p>
                 <div class="architecture-diagram">
-                    <img src="taker_pricing_ss.png" alt="Taker Pricing Diagram" class="architecture-image">
+                    <img src="./images/taker_pricing_ss.png" alt="Taker Pricing Diagram" class="architecture-image">
                 </div>
 
                 <p>
@@ -24,7 +24,7 @@ const TakerPricing = {
                 <h4>Steps to Configure Taker Pricing</h4>
 
                 <div class = "architecture-diagram">
-                    <img src="taker_pricing_setup_ss.png" alt="Taker Pricing Configuration Diagram" class="architecture-image">
+                    <img src="./images/taker_pricing_setup_ss.png" alt="Taker Pricing Configuration Diagram" class="architecture-image">
                 </div>
 
                 <ol>

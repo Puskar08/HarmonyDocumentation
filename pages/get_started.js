@@ -12,7 +12,7 @@ const GetStartedPage = {
             <div class="content-body">
                 <!-- <p>Welcome to Harmony Bridge! This guide will help you set up and configure your trading bridge platform.</p> -->
                 <div class="architecture-diagram">
-                    <img src="bridge_architecture.png" alt="Harmony Bridge Architecture Diagram" class="architecture-image">
+                    <img src="./images/bridge_architecture.png" alt="Harmony Bridge Architecture Diagram" class="architecture-image">
                 </div>
                 
                 <h3>Core Documentation Topics</h3>
