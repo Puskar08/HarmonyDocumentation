@@ -139,7 +139,7 @@ body {
 /* ========== SIDEBAR NAVIGATION ========== */
 .nav-panel {
     padding-top: 20px;
-    width: 400px;
+    width: 300px;
     background: #ffffff;
     border-right: 1px solid #e9edf2;
     overflow-y: auto;
