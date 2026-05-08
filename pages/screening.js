@@ -29,7 +29,7 @@ const ScreeningPage = {
 
                 <h3>Journal</h3>
                 <p>
-                    This page provides the journal details of the bridge operations.
+                    This page provides the journal details of the bridge operations (FIX logs can be seen here as long as they are enabled on the taker/maker rules).
                     Journal entries include various events and messages related to the operations of the bridge, such as connection status, errors, warnings, and other important information that can help in monitoring and troubleshooting the bridge.
                 </p>
                 <div class="architecture-diagram">
@@ -38,7 +38,11 @@ const ScreeningPage = {
 
                 <h3>Provider Prices</h3>
                 <p>
-                    This page provides the real time price details of the symbols from the providers.
+                    For each available provider, the user can montor the prices by the symbol name. 
+                    For the symbols, bid price, ask price and the spread would be visible if that provider is advertising prices over the API or native connection. 
+                    The symbols without a price will still show on the list but with empty liquidity information.
+                    To navigate through different providers, you can use the connector dropdown menu located on the upper right corner.
+
                     This is crucial for monitoring the continuous pricing of the symbols from the providers and the quotes transferred to the takers.
                 </p>
                 <div class="architecture-diagram">
@@ -48,7 +52,9 @@ const ScreeningPage = {
 
                 <h3>Connector Prices</h3>
                 <p>
-                    This page provides the real time price details of the symbols passed to the connectors.
+                    For each available connector, the user can montor the prices by the symbol name. 
+                    For the symbols, bid price, ask price and the spread would be visible if that connector is being advertised prices over the API or native connection. 
+                    The symbols without a price will still show on the list but with empty liquidity information.
                     There is the option to choose the connector on the top right corner to monitor the prices for the specific connector.
                 </p>
                 <div class="architecture-diagram">

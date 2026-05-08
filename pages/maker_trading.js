@@ -10,7 +10,10 @@ const MakerTrading = {
                 <div class="breadcrumb">Get Started → Maker → Trading</div>
             </div>
             <div class="content-body">
-                <p>This section is for configuring the trading behavior of the provider.</p>
+                <p>This section is for configuring the trading behavior of the provider and similar to the pricing page but the rules configured here works for the trading behaviour.</p>
+                <p>Trading page displays all the symbols that are already configured for the selected provider (at the top right corner), 
+                    along with their trading configuration details such as spreads, step size, and min max amount available for trading.
+                </p>
                 <div class="architecture-diagram">
                     <img src="./images/maker_trading_ss.png" alt="Maker Trading Diagram" class="architecture-image">
                 </div>

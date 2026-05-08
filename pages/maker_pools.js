@@ -19,6 +19,17 @@ const Pools = {
                     The main page shows the list of all the pools with details such as name, type, as description.
                 </p>
 
+                <div class="info-box">
+                    Harmony allows to create different types of pools.
+                    <ul>
+                        <li><strong>Simple:</strong> Only one provider can be used for this type of pool (simple and single)</li>
+                        <li><strong>Aggregate:</strong> One or more providers can be put on this pool to get an aggregated order book</li>
+                        <li><strong>Split:</strong> The trades can be split into one or mroe providers with fixed percentages. If the sum of the weights gets above or below 100%, Harmony won't accept the setup</li>
+                        <li><strong>B-Book:</strong> A book version of pool can be created from an existing B book pool if that poll is simple or aggregate type</li>
+                        <li><strong>B-Book Split:</strong> Similar to splity type but this one also includes a B book part. Trades can be split between the providers and B book pool</li>
+                    </ul>
+                </div>
+
                 <h4>Steps to Configure Pools</h4>
 
                 <div class = "architecture-diagram">
@@ -46,10 +57,16 @@ const Pools = {
                 </p>
 
                 <div class="info-box">
-                    <ul>
-                        <li>All * fields are the required fields to be filled in order to add a pool configuration.</li>
-                        <li>Import/Export option is available for bulk configuration of pool settings.</li>
-                    </ul>
+                    <p>
+                        Note that, the pools can be modified but their type can not be changed. 
+                        For example the provider in a simple pool can be changed, but that simple pool can not be converted to a split pool. 
+                        Or on an aggregation pool, the providers can be added or removed, but the cannot be changed to a B book pool, etc
+                    </p>
+                    <p>
+                        Not all pools can be deleted without a hassle.
+                        Some delete rules apply. For example if the pool is being used on a pricing or/or trading profile, it can not be deleted. 
+                        First it should be replaced with other pools on the point of usage. 
+                    </p>
                 </div>
                 
                 <div class="footer-links">

@@ -51,6 +51,7 @@ const TakerDropCopy = {
                 </p>
 
                 <h4>Create Multiple Rules Inside Drop Copy</h4>
+                <p>After the drop copy rule is created, now by clicing on the ⁞≡ button next to the rule, you can specify which symbol be recorded and how.</p> 
                 <div class = "architecture-diagram">
                     <img src="./images/taker_drop_copy_symbols_ss.png" alt="Taker Drop Copy Configuration Diagram" class="architecture-image">
                 </div>
@@ -73,11 +74,22 @@ const TakerDropCopy = {
                     </ul> 
                     
                 </p>
+                <p>
+                    The rules include: drop copy symbol, reverse or same side, multiplier and the markups. 
+                    Normally, the drop copy symbol names are set on the integrations, under configuration, and if no other drop symbol is selected, the default 
+                    symbol name will be used. The trade might be recorded with the same side or can be reversed during the process. And a multiplier can be applied on the trade. 
+                    The multiplier can take any positive reel number. For example if multiplier set to 2, 
+                    the resulting order will be multiplied by 2 and recorded with that amount. Also, markups/markdowns on each side can be applied on the recorded trade. 
+                </p>
 
                 <div class="info-box">
                     <ul>
                         <li>All * fields are the required fields to be filled in order to add a drop copy rule.</li>
                         <li>Import/Export option is available for bulk configuration of drop copy rules.</li>
+                        <li>
+                            Keep in mind that every integration uses a MT5 manager account, and in order the drop copy works as intended, 
+                            a special routing rule (fill with request price) for this manager should be kept on a proper place among the MT5 Admin Routing Rules.
+                        </li>
                     </ul>
                 </div>
                 

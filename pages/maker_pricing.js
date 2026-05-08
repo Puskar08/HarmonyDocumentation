@@ -20,7 +20,14 @@ const MakerPricing = {
                     This includes setting up markups, and market depth to be provided to the taker.
                     Each symbol can have its own unique pricing configuration, allowing for granular control over how prices are calculated and presented to the end system.
                 </p>
-
+                </p>
+                    There are three menus: Add, Export and Import in the table header.
+                    <ul>
+                        <li><strong>Add</strong> - Click to add a new pricing rule for a symbol</li>
+                        <li><strong>Export</strong> - Export the existing pricing rules in a CSV file for backup or bulk editing purposes</li>
+                        <li><strong>Import</strong> - Import pricing rules from a CSV file to quickly set up or update multiple rules at once</li>
+                    </ul>
+                </p>
                 <h4>Steps to Configure Maker Pricing</h4>
 
                 <div class = "architecture-diagram">
@@ -34,10 +41,14 @@ const MakerPricing = {
                         <ul>
                             <li><strong>Enabled</strong> - Toggle to enable or disable the pricing rule</li>
                             <li><strong>Symbol</strong> - Select the symbol to configure pricing (Bridge Symbol)</li>
-                            <li><strong>Alias</strong> - Define an alias for the symbol (name of the symbol in the provider platform)</li>
+                            <li><strong>Alias</strong> - Define an alias for the symbol (name of the symbol in the provider platform or on the FIX API subscription)</li>
                             <li><strong>Bid Markup</strong> - Add a fixed amount (in points) to the bid price</li>
                             <li><strong>Offer Markup</strong> - Add a fixed amount (in points) to the offer price</li>
-                            <li><strong>Market Depth</strong> - Specify the market depth to be provided from the selected provider (only 1 available for timebeing), if no value is specified, all layers will be provided to the taker)</li>
+                            <div class= "info-box">
+                                Before you get the prices to Harmony, you can adjust the spread by setting up the markups. Markups accept both negative and postive values and they are in points.
+                                Depth is the number of layers on both side that you want to subscribe on the provider API.
+                            </div>
+                            <li><strong>Market Depth</strong> - Specify the market depth to be provided from the selected provider, if no value is specified, all layers will be provided to the taker)</li>
                         </ul>
                     </li>
                     <li>Add the configuration and monitor the pricing behavior</li>

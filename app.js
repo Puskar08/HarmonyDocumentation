@@ -53,6 +53,7 @@ const CONFIGURATION_MENU = {
 const RESOURCE_PAGE_LIST = [
     { id: "screening", label: "Screening" },
     { id: "administration", label: "Administration" },
+    { id: "environment", label: "Environment" },
     { id: "contact", label: "Contact Support" }
 ];
 

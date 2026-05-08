@@ -10,7 +10,10 @@ const ConfigurationMarketSessions = {
                 <div class="breadcrumb">Get Started → Configuration → Market Sessions</div>
             </div>
             <div class="content-body">
-                <p>In this section we setup the market sessions and holidays.</p>
+                <p>In this section we define the market sessions and holidays that will be used on the symbols.</p>
+                <div class="info-box"
+                    Note the Harmony operates on UTC time zone, and all the sessions that are created here should use UTC times.
+                </div>
                 <div class="architecture-diagram">
                     <img src="./images/configuration_market_sessions_ss.png" alt="Market Sessions Diagram" class="architecture-image">
                 </div>
@@ -33,7 +36,7 @@ const ConfigurationMarketSessions = {
                             <ul>
                                 <li><strong>Session Entries</strong> - Define the session timing for days in the week</li>
                                 <ul>
-                                    <li><strong>Days</strong> - Select the days for which the market session is applicable and setup the start time and end time</li>
+                                    <li><strong>Days</strong> - Enable the days for which the market session is applicable and setup the start time and end time</li>
                                 </ul>
                                 <li><strong>Holidays</strong> - Define the holidays for the market session</li>
                                 <ul>
