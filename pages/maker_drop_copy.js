@@ -11,6 +11,7 @@ const MakerDropCopy = {
             </div>
             <div class="content-body">
                 <p>This section is for recording trades that are executed by the Provider to the end system to review or analyze the trading behaviour of the taker.</p>
+                
                 <div class="architecture-diagram">
                     <img src="./images/maker_drop_copy_ss.png" alt="Maker Drop Copy Diagram" class="architecture-image">
                 </div>
@@ -41,6 +42,16 @@ const MakerDropCopy = {
                     </li>
                     <li>Add the configuration and monitor the trade copy behavior</li>
                 </ol>
+                <div class="info-box">
+                    <p>
+                        Maker drop copy has a similar usage as taker drop copies. The only difference would be the availabe source types. Here in Maker Drop Copy two source types are available:
+                        Provider and B-Book. If Provider is selected, the <strong>From</strong> field gets populated by the the available providers, and for the B-Book source, <strong>From</strong> field is populated by the appropriate pools
+                        (which is a B-Book type or a B-Book Split type). In case of B-Book Split type only the amount of the B-Book is gonna be recorded.
+                    </p>
+                    <p>
+                        To field is the integration, and the login is the MT5 account that you want to record the trades on.
+                    </p>
+                </div>
 
                 <h4>Editing Existing Drop Copy Rules</h4>
                 <p>

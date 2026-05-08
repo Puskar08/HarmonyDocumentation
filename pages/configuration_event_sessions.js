@@ -10,7 +10,10 @@ const ConfigurationEventSessions = {
                 <div class="breadcrumb">Get Started → Configuration → Event Sessions</div>
             </div>
             <div class="content-body">
-                <p>In this section we setup the event sessions where we apply the rules like increase/decrease spreads/markups and many more based on the Tag.</p>
+                <p>
+                    In this section we setup the event sessions where we apply the rules like increase/decrease spreads/markups and many more based on the Tag, and these events can be used
+                    to create the sub rules in taker pricing and/or taker trading.
+                </p>
                 <div class="architecture-diagram">
                     <img src="./images/configuration_event_sessions_ss.png" alt="Event Sessions Diagram" class="architecture-image">
                 </div>
@@ -29,7 +32,7 @@ const ConfigurationEventSessions = {
                     <li>Navigate to Event Sessions page</strong></li>
                     <li>Click on "Add" button, it will open the event session configuration modal</li>
                         <ul>
-                            <li><strong>Name</strong> - Provide a name for the event session</li>
+                            <li><strong>Name</strong> - Provide a name for the event session (keep in mind, no space can be used on the naming)</li>
                             <li><strong>Add Event</strong> - Select the date for the event (start and end time) then choose the Tag (event type) and specify the value for the tag </li>    
                         </ul>
                     </li>
@@ -44,10 +47,13 @@ const ConfigurationEventSessions = {
                 </p>
 
                 <div class="info-box">
+                    Each event has a date, a start and a finish time as well as a tag. The usage is as follows:
                     <ul>
-                        <li>All * fields are the required fields to be filled in order to add a event session.</li>
-                        <li>Note the timings are all in UTC.</li>
+                        <li>Link the event session to the symbols you desire on Event Session field of symbols on Bridge Symbols under Configuration</li>
+                        <li>Then use the tags on the subitems taker/pricing profiles and/or taker/trading profiles.</li>
                     </ul>
+                    This will give the ability to change the pricing and/or trading behaviour of the symbol according to the date/start and finish times defined on the tag under the session.
+
                 </div>
                 
                 <div class="footer-links">

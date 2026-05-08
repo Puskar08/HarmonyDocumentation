@@ -21,6 +21,15 @@ const ConfigurationIntegrations = {
                     The main page shows the list of added integrations.
                 </p>
 
+                <div class="info-box">
+                    Only MT5 intergration is available right now on Harmony. This requires three things:
+                    <ul>
+                        <li>An integration instance running on windows server</li>
+                        <li>An MT5 manager with proper permissions so that the drop copy trades can be recorded on trading accounts</li>
+                        <li>An MT5 routing rule for the manager created before, so that the required price can be used during order recording process</li>
+                    </ul>
+                </div>
+
                 <h4>Steps to Configure Integrations</h4>
 
                 <div class = "architecture-diagram">

@@ -46,6 +46,8 @@ const ConfigurationProviders = {
                             <li><strong>Time Zone</strong> - Select the time zone for the provider to apply the correct timing for the sessions (like start time, end time for the connections) and other time based configurations</li>
                             <li><strong>Host</strong> - Specify the host address of the provider connection</li>
                             <li><strong>Port</strong> - Specify the port number for the provider connection</li>
+                            <li><strong>Sender Comp Id</strong> - Specify the sender comp id for the connector connection</li>
+                            <li><strong>Target Comp Id</strong> - Provide the target comp id for the connector connection</li>
                             <li><strong>Username</strong> - Provide the username for the provider connection</li>
                             <li><strong>Password</strong> - Provide the password for the provider connection</li>
                             <li><strong>Start Day</strong> - Choose the start day to start communication with the provider</li>

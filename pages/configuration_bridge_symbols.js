@@ -11,6 +11,7 @@ const ConfigurationBridgeSymbols = {
             </div>
             <div class="content-body">
                 <p>
+                    Each setup requires bridge symbol definitions. These are the backbone of Harmony.
                     In this section we setup the bridge symbols to which we map the symbols from the providers and conectors. 
                     Whenever we need to configure rules for the symbols in connectior system or provider platform symbols, we used the bridge symbols that are mapped to correspoing platform symbols from the bridge.
                 </p>
@@ -32,7 +33,7 @@ const ConfigurationBridgeSymbols = {
                     <li>Navigate to Bridge Symbols page</strong></li>
                     <li>Click on "Add" button, it will open the bridge symbol configuration modal</li>
                         <ul>
-                            <li><stong>Enabled</strong> - Toggle to enable or disable the bridge symbol</li>
+                            <li><strong>Enabled</strong> - Toggle to enable or disable the bridge symbol</li>
                             <li><strong>Name</strong> - Provide a name for the bridge symbol</li>
                             <li><strong>Digits</strong> - Specify the number of decimal places for the symbol</li>
                             <li><strong>Lot Size</strong> - Define the amount in lot size for trading the symbol</li>

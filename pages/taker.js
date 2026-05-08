@@ -12,7 +12,7 @@ const TakerOverviewPage = {
             <div class="content-body">
                 
                 <div class="info-box">
-                    A Taker is a destination or endpoint that receives pricing data (quotes/ticks) from the bridge. 
+                    A Taker is a destination or endpoint that receives pricing data (quotes/ticks) from the bridge such as MT5, FIX API and/or Native clients. 
                     It represents a system, platform, or connector that consumes the liquidity.
                 </div>
                 
