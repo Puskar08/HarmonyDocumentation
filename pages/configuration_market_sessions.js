@@ -11,7 +11,7 @@ const ConfigurationMarketSessions = {
             </div>
             <div class="content-body">
                 <p>In this section we define the market sessions and holidays that will be used on the symbols.</p>
-                <div class="info-box"
+                <div class="info-box">
                     Note the Harmony operates on UTC time zone, and all the sessions that are created here should use UTC times.
                 </div>
                 <div class="architecture-diagram">
